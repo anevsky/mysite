@@ -4,10 +4,10 @@ MySite/Users is a simple Python / Django web app with posibility to list, add, e
 
 ## Installation
 
-Install python
-Instal django
-
-Navigate to project root dir
+- Install python
+- Instal django
+- Navigate to project root dir
+- Run the following commands
 
 ```bash
 python manage.py makemigrations 
@@ -15,15 +15,15 @@ python manage.py makemigrations users
 python manage.py migrate 
 ```
 
-Run server on host:port
+- Run server on default host:port
 ```bash
 python manage.py runserver
 ```
 
 ## Usage
 
-Open in browser http://127.0.0.1:8000/
+- Open in browser http://127.0.0.1:8000/
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+- [MIT](https://choosealicense.com/licenses/mit/)
