@@ -1,0 +1,21 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'users/style.css' %}">
+
+<h2>Add page</h2>
+
+<h3>Add team member</h3>
+Set email, location and role.
+<br><br>
+<hr>
+
+<form method="post">
+    {% csrf_token %}
+
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+    {{ form }}
+
+    <br>
+    <input type="submit" value="Save">
+</form>

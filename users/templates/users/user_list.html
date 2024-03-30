@@ -1,0 +1,29 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'users/style.css' %}">
+
+<h2>List page</h2>
+
+<h1><a href="{% url 'users:add' %}" style="text-align: right; float: right;">+</a></h1>
+
+<h3>Team members</h3>
+You have {{ user_list|length }} team members.
+<br><br>
+<hr>
+{% if user_list %}
+    {% for u in user_list %}
+        <a href="{% url 'users:edit' u.id %}">
+            <img width="50" src="{% static 'users/images/avatar.jpeg' %}" alt="avatar">
+            <br><br>
+            <b>{{ u.first_name }} {{ u.last_name }} {% if u.role == 'ADMIN' %} (admin) {% endif %}</b>
+            <br>
+            {{ u.phone }}
+            <br>
+            {{ u.email }}
+            <br><br>
+        </a>
+        <hr>
+    {% endfor %}
+{% else %}
+    <p>There is no any team members yet.</p>
+{% endif %}
